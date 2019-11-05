@@ -155,7 +155,7 @@
             </a>
         </div>
     </footer>
-   <section class="modal modal-map">
+    <section class="modal modal-map modal-show">
         <h3 class="visually-hidden modal__header">ПОИСК ГОСТИНИЦЫ В седоне</h3>
         <div class="modal__form-container">
             <form class="modal__form" action="#" method="get">
@@ -212,7 +212,7 @@
                         <span class="modal__label modal__label--adults">Взрослые:</span>
                         <div class="modal__count-input-container">
                             <button type="button" class="modal__count-btn modal__count-btn--decrease decrement-adults"></button>
-                            <input type="text" class="modal__count-adults" value="2"></input>
+                            <input type="text" class="modal__count-adults" value="2" readonly></input>
                             <button type="button" class="modal__count-btn modal__count-btn--increase increment-adults"></button>
                         </div>
                     </div class="modal__count-container">
@@ -236,10 +236,7 @@
         var popup = document.querySelector(".modal-map");
         var close = popup.querySelector(".modal-close");
 
-        var form = popup.querySelector("form");
-        var arrival = popup.querySelector("[name=arrival-date]");
-
-        link.addEventListener("click", function(evt) 
+        link.addEventListener("click", function(evt)
         {
             evt.preventDefault();
             popup.classList.toggle("modal-show");
