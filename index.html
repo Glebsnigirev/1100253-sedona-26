@@ -16,6 +16,7 @@
                 <li><a href="#">Фото и видео</a></li>
             </ul>
             <div class="nav-logo">
+              <a class="nav-logo__link" href="#"><img class="nav-logo__self" src="img/logo.png" alt="" width="138" height="70"></a>
             </div>
             <ul class="site-nav site-nav--secondhalf">
                 <li><a href="#">Карта штата</a></li>
@@ -154,7 +155,7 @@
             </a>
         </div>
     </footer>
-    <section class="modal modal-map">
+    <section class="modal modal-map modal-show">
         <h3 class="visually-hidden modal__header">ПОИСК ГОСТИНИЦЫ В седоне</h3>
         <div class="modal__form-container">
             <form class="modal__form" action="#" method="get">
@@ -235,10 +236,7 @@
         var popup = document.querySelector(".modal-map");
         var close = popup.querySelector(".modal-close");
 
-        var form = popup.querySelector("form");
-        var arrival = popup.querySelector("[name=arrival-date]");
-
-        link.addEventListener("click", function(evt) 
+        link.addEventListener("click", function(evt)
         {
             evt.preventDefault();
             popup.classList.toggle("modal-show");
